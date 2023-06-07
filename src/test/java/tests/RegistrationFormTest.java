@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static testdata.TestData.*;
@@ -11,6 +12,7 @@ public class RegistrationFormTest extends TestBase {
 
 
     @Test
+    @DisplayName("Successful registration")
     void fillRegistrationForm() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -30,7 +32,11 @@ public class RegistrationFormTest extends TestBase {
                 .setCity(city)
                 .clickSubmit();
 
-        
+
+
+
+
+
         registrationPage.verifyRegistrationResultModalAppears()
                         .verifyResult("Student Name", firstName + " " + lastName)
                         .verifyResult("Student Email", userEmail)
