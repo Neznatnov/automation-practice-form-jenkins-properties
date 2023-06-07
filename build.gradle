@@ -8,20 +8,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation("com.codeborne:selenide:6.12.4")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
-    testImplementation 'org.testng:testng:7.1.0'
-    testRuntimeOnly("org.slf4j:slf4j-simple:2.0.7")
-    implementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation ("io.qameta.allure:allure-selenide:2.17.3")
-
-}
-
-test {
-    useJUnitPlatform()
-}
-
 allure {
     report {
         version.set("2.17.3") //версия Allure Report (https://github.com/allure-framework/allure2)
@@ -35,3 +21,18 @@ allure {
         }
     }
 }
+
+dependencies {
+    testImplementation("com.codeborne:selenide:6.13.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
+    testImplementation 'org.testng:testng:7.1.0'
+    testRuntimeOnly("org.slf4j:slf4j-simple:2.0.7")
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation ("io.qameta.allure:allure-selenide:2.17.3")
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
