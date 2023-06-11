@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,7 +12,7 @@ import static testdata.TestData.*;
 
 public class RegistrationFormTest extends TestBase {
 
-
+    @Tag("registration")
     @Test
     @DisplayName("Successful registration")
     void fillRegistrationForm() {
