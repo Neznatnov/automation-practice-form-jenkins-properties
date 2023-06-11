@@ -15,7 +15,7 @@ public class RegistrationFormTest extends TestBase {
     @Test
     @DisplayName("Successful registration")
     void fillRegistrationForm() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        //SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open form", () -> {
             registrationPage.openPage()
@@ -45,7 +45,7 @@ public class RegistrationFormTest extends TestBase {
                     .verifyResult("Date of Birth", birthDay + " " + birthMonth + "," + birthYear)
                     .verifyResult("Subjects", subject)
                     .verifyResult("Hobbies", hobbies)
-                    .verifyResult("Picture", "cats.jpg")
+                    .verifyResult("Picture", picture)
                     .verifyResult("Address", address)
                     .verifyResult("State and City", state + " " + city);
         });

@@ -47,7 +47,6 @@ public class TestData {
                 return "";
         }
     }
-
     public enum Gender {
         MALE("Male"),
         FEMALE("Female"),
@@ -63,7 +62,6 @@ public class TestData {
             return value;
         }
     }
-
     public enum Month {
         JANUARY("January"),
         FEBRUARY("February"),
@@ -87,7 +85,6 @@ public class TestData {
             return value;
         }
     }
-
     public enum Subject {
         MATHS,
         HINDI,
@@ -103,8 +100,6 @@ public class TestData {
         HISTORY;
 
     }
-
-
     public enum Hobbies {
         SPORTS("Sports"),
         READING("Reading"),
@@ -119,6 +114,4 @@ public class TestData {
             return value;
         }
     }
-
-
 }
